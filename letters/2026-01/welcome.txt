@@ -1,0 +1,5 @@
+This is a sample letter.
+
+Replace this text with your own — just edit this file directly,
+or delete it and add a new .txt file in this same folder
+(letters/2026-01/), then list its filename in data.js.

@@ -1,0 +1,197 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --paper: #FBF6EF;
+  --paper-shadow: #EFE4D6;
+  --ink: #3B2C35;
+  --rose: #D9A8A0;
+  --rose-deep: #C17F73;
+  --sage: #8A9B7E;
+  --gold: #C9A15A;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Work Sans', -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+a { color: inherit; }
+
+/* ---------- Header ---------- */
+.site-header {
+  text-align: center;
+  padding: 4.5rem 1.5rem 3rem;
+}
+
+.site-header h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.01em;
+}
+
+.site-header .subtitle {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rose-deep);
+  opacity: 0.85;
+}
+
+.site-header .rule {
+  width: 64px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1.4rem auto 0;
+  border-radius: 2px;
+}
+
+/* ---------- Month grid (the "envelopes") ---------- */
+.month-grid {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.75rem;
+}
+
+.month-card {
+  position: relative;
+  display: block;
+  background: #fff;
+  border-radius: 4px;
+  padding: 1.6rem 1.4rem 1.4rem;
+  text-decoration: none;
+  color: var(--ink);
+  box-shadow: 0 1px 0 var(--paper-shadow), 0 10px 24px -18px rgba(59,44,53,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.month-card::before {
+  /* the envelope flap */
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 46px;
+  background: var(--rose);
+  clip-path: polygon(0 0, 50% 68%, 100% 0);
+  opacity: 0.9;
+}
+
+.month-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 0 var(--paper-shadow), 0 16px 30px -16px rgba(59,44,53,0.4);
+}
+
+.month-card .month-label {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 1.4rem 0 0.3rem;
+}
+
+.month-card .month-meta {
+  position: relative;
+  z-index: 1;
+  font-size: 0.85rem;
+  color: var(--ink);
+  opacity: 0.6;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  opacity: 0.65;
+  font-style: italic;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+/* ---------- Month detail page ---------- */
+.back-link {
+  display: inline-block;
+  margin: 2rem 0 0 2rem;
+  font-size: 0.9rem;
+  color: var(--rose-deep);
+  text-decoration: none;
+}
+.back-link:hover { text-decoration: underline; }
+
+.month-page-header {
+  text-align: center;
+  padding: 1.5rem 1.5rem 2.5rem;
+}
+.month-page-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 0;
+}
+
+.section-label {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+  font-weight: 600;
+}
+
+.photo-grid {
+  max-width: 900px;
+  margin: 0.8rem auto 3rem;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 8px 20px -14px rgba(59,44,53,0.5);
+  background: var(--paper-shadow);
+}
+
+.letters-list {
+  max-width: 700px;
+  margin: 0.8rem auto 4rem;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.letter-card {
+  background: #fff;
+  border-left: 3px solid var(--rose);
+  padding: 1.6rem 1.8rem;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 var(--paper-shadow);
+  white-space: pre-wrap;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.no-content {
+  text-align: center;
+  opacity: 0.55;
+  font-style: italic;
+  padding: 1rem 1.5rem 2.5rem;
+}
