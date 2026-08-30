@@ -11,7 +11,7 @@
 const MONTHS = [
   {
     id: "2026-01",
-    label: "January 2026",
+    label: "September 2026",
     photos: [
       // "us-at-the-beach.jpg",
       // "coffee-date.jpg"
@@ -22,7 +22,7 @@ const MONTHS = [
   },
   {
     id: "2026-02",
-    label: "February 2026",
+    label: "October 2026",
     photos: [],
     letters: []
   }
