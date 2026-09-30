@@ -12,7 +12,7 @@ const MONTHS = [
   {
     id: "2026-09",
     label: "September 2026",
-    photos: ["Photo_1.jpg", "Photo_2.jpg"],
+    photos: ["Photo_1.jpg", "Photo_2.jpg", "Unknown-17.jpg", "Unknown-18.jpg","Unknown-19.jpg"],
     letters: [
       "welcome.txt", "september42026.txt", "sept62026.txt", "september92026.txt", "september212026.txt"
     ]
