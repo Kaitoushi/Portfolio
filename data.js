@@ -14,7 +14,7 @@ const MONTHS = [
     label: "September 2026",
     photos: ["Photo_1.jpg", "Photo_2.jpg"],
     letters: [
-      "welcome.txt"
+      "welcome.txt", "september42026.txt", "sept62026.txt", "september92026.txtf", "september212026.txt"
     ]
   },
   {
